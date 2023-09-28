@@ -1,4 +1,7 @@
 # MarzbanExpiredUserRemover
+
+Remove all the expired users easily by just runing this script
+
 ```diff
 
 DOMAIN = 'YOUR_DOMAIN'
