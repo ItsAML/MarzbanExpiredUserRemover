@@ -1,9 +1,12 @@
 # MarzbanExpiredUserRemover
-```python
+```diff
+
 DOMAIN = 'YOUR_DOMAIN'
 PORT = 443
 USERNAME = 'YOUR_USERNAME'
 PASSWORD = 'YOUR_PASSWORD'
+
+```
 
 
 ## Table of Contents
