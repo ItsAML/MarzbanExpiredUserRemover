@@ -5,7 +5,8 @@ Remove all the expired users easily by just runing this script
 ## Table of Contents
 - [About](#about)
 - [Getting Started](#getting-started)
-  - [Prerequisites](#prerequisites)
+- [Prerequisites](#prerequisites)
+- [Windows](#windows)
 
 ```python
 DOMAIN = 'YOUR_DOMAIN'
