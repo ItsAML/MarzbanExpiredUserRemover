@@ -23,7 +23,9 @@ PASSWORD = 'YOUR_PASSWORD'
 
 ## About
 
-Provide a brief overview of your project. Explain what it does and why it's useful.
+This script is designed to automate the management of users in a web application. It securely logs in to an admin panel, retrieves a list of expired users, and removes them from the system, all while providing detailed logging for each operation. It is a valuable tool for efficiently managing user accounts in a web-based environment.
+
+Feel free to modify and expand upon this description to better suit your project's specific goals and context.
 
 ## Getting Started
 
