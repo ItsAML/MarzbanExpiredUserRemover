@@ -37,7 +37,7 @@ or manually open the .env file with this command
 ```bash
 nano /opt/marzban/.env
 ```
-and then simply add this line to the file
+and then manually add this line to the file
 ```python
 DOCS=True
 ```
