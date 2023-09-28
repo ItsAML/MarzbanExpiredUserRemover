@@ -2,13 +2,11 @@
 
 Remove all the expired users easily by just runing this script
 
-```diff
-
-- # DOMAIN = 'YOUR_DOMAIN'
+```python
+DOMAIN = 'YOUR_DOMAIN'
 PORT = 443
-- # USERNAME = 'YOUR_USERNAME'
+USERNAME = 'YOUR_USERNAME'
 PASSWORD = 'YOUR_PASSWORD'
-
 ```
 
 
