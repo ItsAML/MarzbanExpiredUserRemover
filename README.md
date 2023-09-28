@@ -42,8 +42,23 @@ and then manually add this line to the file
 DOCS=True
 ```
 ### Prerequisites
+```bash
+# Clone the Repository
+git clone https://github.com/your-username/your-repo.git
 
-List any prerequisites or dependencies needed to run the project.
+# Change Directory
+cd your-repo
+
+# Install pip (if not already installed)
+wget -qO- https://bootstrap.pypa.io/get-pip.py | python3 -
+
+# Install Dependencies
+python3 -m pip install -r requirements.txt
+
+# Run the Script
+python3 remove_expire_users.py
+```
+
 
 ### Installation
 
