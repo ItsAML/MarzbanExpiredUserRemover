@@ -10,6 +10,7 @@ Remove all the expired users easily by just runing this script
 - [Windows](#windows)
 - [PHP](#php)
 
+Make Sure To Change these variables before runing the script.
 ```python
 DOMAIN = 'YOUR_DOMAIN'
 PORT = 443
