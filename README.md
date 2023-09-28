@@ -20,7 +20,7 @@ PASSWORD = 'YOUR_PASSWORD'
 
 ## About
 
-This script is designed to automate the management of users in marzban api. It securely logs in to an admin panel, retrieves a list of expired users, and removes them from the system, all while providing detailed logging for each operation. It is a valuable tool for efficiently managing user accounts in a web-based environment.
+This script is designed to automate the management of users using marzban api. It securely logs in to an admin panel, retrieves a list of expired users, and removes them from the system, all while providing detailed logging for each operation. It is a valuable tool for efficiently managing user accounts in a web-based environment.
 
 Feel free to modify and expand upon this description to better suit your project's specific goals and context.
 
