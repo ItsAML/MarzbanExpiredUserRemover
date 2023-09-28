@@ -44,10 +44,10 @@ DOCS=True
 ### Prerequisites
 ```bash
 # Clone the Repository
-git clone https://github.com/your-username/your-repo.git
+git clone https://github.com/ItsAML/MarzbanExpiredUserRemover.git
 
 # Change Directory
-cd your-repo
+cd MarzbanExpiredUserRemover
 
 # Install pip (if not already installed)
 wget -qO- https://bootstrap.pypa.io/get-pip.py | python3 -
