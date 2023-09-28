@@ -6,6 +6,7 @@ Remove all the expired users easily by just runing this script
 - [About](#about)
 - [Getting Started](#getting-started)
 - [Prerequisites](#prerequisites)
+- [Linux](#Linux)
 - [Windows](#windows)
 
 ```python
@@ -36,6 +37,8 @@ and then manually add this line to the file
 DOCS=True
 ```
 ### Prerequisites
+Python 3.0+ with requests library required. you cant run the script on python 2.0
+### Linux
 ```bash
 # Clone the Repository
 git clone https://github.com/ItsAML/MarzbanExpiredUserRemover.git
@@ -52,4 +55,5 @@ python3 -m pip install -r requirements.txt
 # Run the Script
 python3 main.py
 ```
+### Windows
 
