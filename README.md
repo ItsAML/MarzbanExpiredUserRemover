@@ -56,6 +56,7 @@ python3 -m pip install -r requirements.txt
 python3 main.py
 ```
 ### Windows
+```bash
 # Clone the Repository
 git clone https://github.com/ItsAML/MarzbanExpiredUserRemover.git
 
@@ -71,4 +72,4 @@ pip install -r requirements.txt
 
 # Run the Script (replace 'flow.py' with the actual script filename)
 python main.py
-
+```
