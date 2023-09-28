@@ -76,6 +76,13 @@ python main.py
 ```
 ### PHP
 if you wanna run the script with php simply change the variables inside the php file and then run the script
+```php
+// Constants
+define('DOMAIN', 'YOUR_DOMAIN');
+define('PORT', 443);
+define('USERNAME', 'YOUR_USERNAME');
+define('PASSWORD', 'YOUR_PASSWORD');
+```
 ```bash
 # Navigate to the Script Directory
 cd MarzbanExpiredUserRemover
