@@ -1,6 +1,10 @@
-# Project Name
+# MarzbanExpiredUserRemover
+```python
+DOMAIN = 'YOUR_DOMAIN'
+PORT = 443
+USERNAME = 'YOUR_USERNAME'
+PASSWORD = 'YOUR_PASSWORD'
 
-Brief description of your project.
 
 ## Table of Contents
 - [About](#about)
