@@ -8,6 +8,7 @@ Remove all the expired users easily by just runing this script
 - [Prerequisites](#prerequisites)
 - [Linux](#Linux)
 - [Windows](#windows)
+- [PHP](#php)
 
 ```python
 DOMAIN = 'YOUR_DOMAIN'
@@ -73,3 +74,14 @@ pip install -r requirements.txt
 # Run the Script (replace 'flow.py' with the actual script filename)
 python main.py
 ```
+### PHP
+if you wanna run the script with php simply change the variables inside the php file and then run the script
+```bash
+# Navigate to the Script Directory
+cd MarzbanExpiredUserRemover
+
+# Run the PHP Script (make sure to change the variables before runing the script so you wont run into any issue)
+php main.php
+
+```
+
