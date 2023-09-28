@@ -1,4 +1,4 @@
-# MarzbanExpiredUserRemover
+# Marzban Expired Users Remover
 
 Remove all the expired users easily by just runing this script
 
