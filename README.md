@@ -29,8 +29,10 @@ Feel free to modify and expand upon this description to better suit your project
 
 ## Getting Started
 
-Instructions for setting up and running your project.
-
+First of all you need to enable Marzban API which you can use this command below
+```bash
+echo 'DOCS=True' | sudo tee -a /opt/marzban/.env
+```
 ### Prerequisites
 
 List any prerequisites or dependencies needed to run the project.
