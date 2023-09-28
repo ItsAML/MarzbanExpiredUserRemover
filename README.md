@@ -56,7 +56,7 @@ wget -qO- https://bootstrap.pypa.io/get-pip.py | python3 -
 python3 -m pip install -r requirements.txt
 
 # Run the Script
-python3 remove_expire_users.py
+python3 main.py
 ```
 
 
