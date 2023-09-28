@@ -1,6 +1,6 @@
 # Marzban Expired Users Remover
 
-Remove all the expired users easily by just runing this script
+Simplify user management by effortlessly purging expired users using this script.
 
 ## Table of Contents
 - [About](#about)
