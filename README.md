@@ -33,6 +33,14 @@ First of all you need to enable Marzban API which you can use this command below
 ```bash
 echo 'DOCS=True' | sudo tee -a /opt/marzban/.env
 ```
+or manually open the .env file with this command
+```bash
+nano /opt/marzban/.env
+```
+and then simply add this line to the file
+```python
+DOCS=True
+```
 ### Prerequisites
 
 List any prerequisites or dependencies needed to run the project.
