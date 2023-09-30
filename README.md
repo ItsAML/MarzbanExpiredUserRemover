@@ -38,6 +38,10 @@ and then add this line to the file
 ```python
 DOCS=True
 ```
+Finally Restart The Marzban
+```bash
+marzban restart
+```
 ### Prerequisites
 Python 3.0+ with requests library required. you cant run the script on python 2.0
 ### Linux
