@@ -39,7 +39,7 @@ and then add this line to the file
 DOCS=True
 ```
 Finally Restart The Marzban
-```bash
+```sh
 marzban restart
 ```
 ### Prerequisites
