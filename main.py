@@ -10,12 +10,14 @@ DOMAIN = 'YOUR_DOMAIN'
 PORT = 'YOUR_PORT'
 USERNAME = 'YOUR_USERNAME'
 PASSWORD = 'YOUR_PASSWORD'
+HTTPS = True  # Set this to True for HTTPS, False for HTTP
 
 # Create a reusable session
 session = requests.Session()
 
 def get_access_token(username, password):
-    url = f'https://{DOMAIN}:{PORT}/api/admin/token'
+    use_protocol = 'https' if HTTPS else 'http'
+    url = f'{use_protocol}://{DOMAIN}:{PORT}/api/admin/token'
     data = {
         'username': username,
         'password': password
