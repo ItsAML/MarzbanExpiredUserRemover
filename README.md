@@ -76,7 +76,7 @@ cd MarzbanExpiredUserRemover
 # Install Dependencies
 pip install -r requirements.txt
 
-# Run the Script (replace 'flow.py' with the actual script filename)
+# Run the Script
 python main.py
 ```
 ### PHP
