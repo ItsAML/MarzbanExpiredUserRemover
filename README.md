@@ -13,9 +13,10 @@ Simplify user management by effortlessly purging expired users using this script
 Make Sure To Change these variables before runing the script.
 ```python
 DOMAIN = 'YOUR_DOMAIN'
-PORT = 443
+PORT = 'YOUR_PORT'
 USERNAME = 'YOUR_USERNAME'
 PASSWORD = 'YOUR_PASSWORD'
+HTTPS = True  # Set this to True for HTTPS, False for HTTP
 ```
 
 ## About
