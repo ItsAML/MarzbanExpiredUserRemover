@@ -16,6 +16,7 @@ DOMAIN = 'YOUR_DOMAIN'
 PORT = 'YOUR_PORT'
 USERNAME = 'YOUR_USERNAME'
 PASSWORD = 'YOUR_PASSWORD'
+USER_STATUS = 'E'  # Set E for Expired, L for Limited, D for Disabled, A for Active
 HTTPS = True  # Set this to True for HTTPS, False for HTTP
 ```
 
