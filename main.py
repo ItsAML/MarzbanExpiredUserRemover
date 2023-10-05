@@ -10,17 +10,31 @@ DOMAIN = 'YOUR_DOMAIN'
 PORT = 'YOUR_PORT'
 USERNAME = 'YOUR_USERNAME'
 PASSWORD = 'YOUR_PASSWORD'
+USER_STATUS = 'E'  # Set E for Expired, L for Limited, D for Disabled, A for Active
 HTTPS = True  # Set this to True for HTTPS, False for HTTP
 
 # Create a reusable session
 session = requests.Session()
 
+# Yay!
+STATUS_MAPPING = {
+    'E': 'Expired',
+    'L': 'Limited',
+    'D': 'Disabled',
+    'A': 'Active'
+}
+
+
 def get_access_token(username, password):
     use_protocol = 'https' if HTTPS else 'http'
     url = f'{use_protocol}://{DOMAIN}:{PORT}/api/admin/token'
     data = {
-        'username': username,
-        'password': password
+        'username': USERNAME,
+        'password': PASSWORD
+    }
+    headers = {
+        "accept": "application/json",
+        "Content-Type": "application/x-www-form-urlencoded"
     }
 
     try:
@@ -33,8 +47,21 @@ def get_access_token(username, password):
         logging.error(f'Error occurred while obtaining access token: {e}')
         return None
 
+
 def get_users_list(access_token):
-    url = f'https://{DOMAIN}:{PORT}/api/users?status=expired'
+    use_protocol = 'https' if HTTPS else 'http'
+    if USER_STATUS.upper() == 'E':
+        url = f'{use_protocol}://{DOMAIN}:{PORT}/api/users?status=expired'
+    elif USER_STATUS.upper() == 'L':
+        url = f'{use_protocol}://{DOMAIN}:{PORT}/api/users?status=limited'
+    elif USER_STATUS.upper() == 'D':
+        url = f'{use_protocol}://{DOMAIN}:{PORT}/api/users?status=disabled'
+    elif USER_STATUS.upper() == 'A':
+        url = f'{use_protocol}://{DOMAIN}:{PORT}/api/users?status=active'
+    else:
+        logging.error(f'Invalid USER_STATUS: {USER_STATUS}')
+        return None
+
     headers = {
         'accept': 'application/json',
         'Authorization': f'Bearer {access_token}'
@@ -49,8 +76,10 @@ def get_users_list(access_token):
         logging.error(f'Error occurred while retrieving users list: {e}')
         return None
 
-def remove_expired_users(access_token, exp_user):
-    url = f'https://{DOMAIN}:{PORT}/api/user/{exp_user}'
+
+def remove_users(access_token, user):
+    use_protocol = 'https' if HTTPS else 'http'
+    url = f'{use_protocol}://{DOMAIN}:{PORT}/api/user/{user}'
     headers = {
         'accept': 'application/json',
         'Authorization': f'Bearer {access_token}',
@@ -62,31 +91,33 @@ def remove_expired_users(access_token, exp_user):
         user_details = response.json()
         return True
     except requests.exceptions.RequestException as e:
-        logging.error(f'Error occurred while modifying user data limit: {e}')
+        logging.error(f'Error occurred while removing user: {e}')
         return False
+
 
 if __name__ == "__main__":
     access_token = get_access_token(USERNAME, PASSWORD)
     if access_token:
         users_list = get_users_list(access_token)
         if users_list:
-            expired_users = []
+            users = []
             for user in users_list.get('users', []):
                 match = re.search(r"'username'\s*:\s*'(\w+)'", str(user))
                 if match:
-                    expired_users.append(match.group(1))
+                    users.append(match.group(1))
 
-            # Count and print the number of expired users
-            num_expired_users = len(expired_users)
-            logging.info(f'Total expired users: {num_expired_users}')
+            # Count and print the number of users based on USER_STATUS
+            num_users = len(users)
+            status_text = STATUS_MAPPING.get(USER_STATUS.upper(), 'Unknown')
+            logging.info(f'Total {status_text} Users: {num_users} Found.')
 
-            for i in expired_users:
-                if remove_expired_users(access_token, i):
+            for i in users:
+                if remove_users(access_token, i):
                     logging.info(f'User {i} has been successfully removed.')
                 else:
                     logging.error(f'Failed to remove user {i}')
 
-            logging.info("All expired users have been processed.")
+            logging.info(f'All {status_text} users have been processed.')
 
 # @AMLDevelopment in Telegram
 # Github : https://github.com/itsAML
