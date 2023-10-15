@@ -4,7 +4,6 @@ Simplify user management by effortlessly purging expired users using this script
 
 ## Table of Contents
 - [About](#about)
-- [Getting Started](#getting-started)
 - [Prerequisites](#prerequisites)
 - [Linux](#Linux)
 - [Windows](#windows)
@@ -26,24 +25,6 @@ This script is designed to automate the management of users using marzban api. I
 
 Feel free to modify and expand upon this description to better suit your project's specific goals and context.
 
-## Getting Started
-
-First of all you need to enable Marzban API which you can use this command below
-```bash
-echo 'DOCS=True' | sudo tee -a /opt/marzban/.env
-```
-or manually open the .env file with this command
-```bash
-nano /opt/marzban/.env
-```
-and then add this line to the file
-```python
-DOCS=True
-```
-Finally Restart The Marzban
-```sh
-marzban restart
-```
 ### Prerequisites
 Python 3.0+ with requests library required. you cant run the script on python 2.0
 ### Linux
